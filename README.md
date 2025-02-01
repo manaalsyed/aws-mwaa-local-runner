@@ -1,6 +1,7 @@
 # CEP AWS Local Runner
 
 Use this tool to run MWAA (Amazon Managed Airflow) in a docker container. This allows for testing without pushing (i.e. overwriting production code)
+
 Currently this repo is meant to be run in side the airflow repo. Eventually will make the directory a configuration, and it doesn't matter where on your machine it lives.
 
 ## Note
