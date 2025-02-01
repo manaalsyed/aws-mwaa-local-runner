@@ -6,3 +6,4 @@ dags/**/*.pyc
 /db-data
 .DS_Store
 docker/config/.env.localrunner
+requirements/requirements.txt
