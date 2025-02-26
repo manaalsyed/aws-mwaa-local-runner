@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   postgres:
-    image: postgres:13-alpine
+    image: postgres:15-alpine
     environment:
       - POSTGRES_USER=airflow
       - POSTGRES_PASSWORD=airflow
@@ -10,8 +10,10 @@ services:
       options:
         max-size: 10m
         max-file: "3"
+    ports:
+      - "5431:5432"
     volumes:
-      - "${PWD}/db-data:/var/lib/postgresql/data"
+      - "${PWD}/sql:/docker-entrypoint-initdb.d:ro"
 
   local-runner:
     image: amazon/mwaa-local:2_10_3
