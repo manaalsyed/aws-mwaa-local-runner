@@ -27,7 +27,9 @@ CREATE TABLE cep_core_todo.rebrandly_list (
 	survey_id text NOT NULL,
 	rebrandly_id text NULL,
 	rebrandly_url text NULL,
-	is_active bool DEFAULT true NULL
+	is_active bool DEFAULT true NULL,
+	needs_to_be_closed bool DEFAULT false NULL,
+	CONSTRAINT surveys_list_survey_id_key UNIQUE (survey_id)
 );
 
 -- cep_core_todo.dashboard_list definition
