@@ -27,19 +27,16 @@ CREATE TABLE cep_core_todo.rebrandly_list (
 	survey_id text NOT NULL,
 	rebrandly_id text NULL,
 	rebrandly_url text NULL,
-	is_active bool DEFAULT true NULL,
-	needs_to_be_closed bool DEFAULT false NULL,
-	CONSTRAINT surveys_list_survey_id_key UNIQUE (survey_id)
+	needs_to_be_deleted bool DEFAULT false NULL,
+	CONSTRAINT rebrandly_list_rebrandly_id_key UNIQUE (rebrandly_id),
+	CONSTRAINT rebrandly_list_survey_id_key UNIQUE (survey_id)
 );
-
--- cep_core_todo.dashboard_list definition
-
--- Drop table
 
 DROP TABLE IF EXISTS cep_core_todo.dashboard_list;
 CREATE TABLE cep_core_todo.dashboard_list (
 	opportunity_id text NOT NULL,
 	dashboard_id text NULL,
 	dashboard_url text NULL,
-	is_active bool DEFAULT true NULL
+	CONSTRAINT dashboard_list_dashboard_id_key UNIQUE (dashboard_id),
+	CONSTRAINT dashboard_list_opportunity_id_key UNIQUE (opportunity_id)
 );
