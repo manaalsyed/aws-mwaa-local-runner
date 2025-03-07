@@ -2,7 +2,12 @@
 
 Use this tool to run MWAA (Amazon Managed Airflow) in a docker container. This allows for testing without pushing (i.e. overwriting production code)
 
-Currently this repo is meant to be run in side the airflow repo. Eventually will make the directory a configuration, and it doesn't matter where on your machine it lives.
+Currently this repo is meant to be run in side the airflow repo at the root level. Using it this way automatically connects it with the dags folder at the correct path that matches production.
+
+If trying to get secrets locally, edit `airflow.cfg` with the correct credentials
+go to `tech_team_docs/scripts` to automatically get session token. 
+
+Everything below is taken from the Amazon repository.
 
 ## Note
 Starting from Airflow version 2.9, MWAA has open-sourced the original Docker image used in our production deployments. You can refer to our open-source image repository at https://github.com/aws/amazon-mwaa-docker-images to create a local environment identical to that of MWAA.
