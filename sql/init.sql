@@ -1,6 +1,7 @@
 DROP SCHEMA IF EXISTS cep_core_todo;
 CREATE SCHEMA cep_core_todo;
 CREATE SCHEMA yt_raw_data;
+CREATE SCHEMA yt_sandbox_raw_data;
 CREATE SCHEMA aas_raw_data;
 CREATE SCHEMA dbt_manaals;
 
