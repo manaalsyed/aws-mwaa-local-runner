@@ -98,6 +98,8 @@ reset-db)
    ;;
 start)
    cp $PWD/../.env docker/config/.env.localrunner
+   cp -r ~/.aws/credentials docker/config/.aws/credentials
+   cp -r ~/.aws/config docker/config/.aws/config
    docker-compose -p $DOCKER_COMPOSE_PROJECT_NAME -f ./docker/docker-compose-local.yml up
    ;;
 help)

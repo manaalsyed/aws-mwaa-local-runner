@@ -7,3 +7,4 @@ dags/**/*.pyc
 .DS_Store
 docker/config/.env.localrunner
 requirements/requirements.txt
+docker/config/.aws

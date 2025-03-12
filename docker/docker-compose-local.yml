@@ -28,6 +28,7 @@ services:
         max-size: 10m
         max-file: "3"
     volumes:
+      - "./config/.aws:/usr/local/airflow/.aws"
       - "${PWD}/../dags:/usr/local/airflow/dags"
       - "${PWD}/../requirements.txt:/usr/local/airflow/requirements/requirements.txt"
       - "${PWD}/startup_script:/usr/local/airflow/startup"
