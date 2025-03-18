@@ -32,9 +32,7 @@ CREATE TABLE cep_core_todo.rebrandly_list (
 
 DROP TABLE IF EXISTS cep_core_todo.dashboard_list;
 CREATE TABLE cep_core_todo.dashboard_list (
-	opportunity_id text NOT NULL,
-	dashboard_id text NULL,
-	dashboard_url text NULL,
-	CONSTRAINT dashboard_list_dashboard_id_key UNIQUE (dashboard_id),
-	CONSTRAINT dashboard_list_opportunity_id_key UNIQUE (opportunity_id)
+	dashboard_id text NOT NULL,
+	needs_to_be_deleted bool DEFAULT true NULL,
+	CONSTRAINT dashboard_list_dashboard_id_key UNIQUE (dashboard_id)
 );
