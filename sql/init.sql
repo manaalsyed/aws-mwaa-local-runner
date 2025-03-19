@@ -25,9 +25,9 @@ CREATE TABLE cep_core_todo.surveys_list (
 
 DROP TABLE IF EXISTS cep_core_todo.rebrandly_list;
 CREATE TABLE cep_core_todo.rebrandly_list (
-	survey_id text NOT NULL,
+	rebrandly_id text NOT NULL,
 	needs_to_be_deleted bool DEFAULT true NULL,
-	CONSTRAINT rebrandly_list_survey_id_key UNIQUE (survey_id)
+	CONSTRAINT rebrandly_list_rebrandly_id_key UNIQUE (rebrandly_id)
 );
 
 DROP TABLE IF EXISTS cep_core_todo.dashboard_list;
