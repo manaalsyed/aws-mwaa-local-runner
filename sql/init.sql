@@ -36,3 +36,13 @@ CREATE TABLE cep_core_todo.dashboard_list (
 	needs_to_be_deleted bool DEFAULT true NULL,
 	CONSTRAINT dashboard_list_dashboard_id_key UNIQUE (dashboard_id)
 );
+
+DROP TABLE IF EXISTS cep_core_todo.comment_files_list;
+CREATE TABLE cep_core_todo.comment_files_list (
+	profiled_id text NOT NULL,
+    "level" text NOT NULL,
+    product text NOT NULL,
+	parquet_uploaded bool DEFAULT false NULL,
+	excel_uploaded bool DEFAULT false NULL,
+	CONSTRAINT comment_files_list_profiled_id_product_key UNIQUE(profiled_id, product, level)
+);
