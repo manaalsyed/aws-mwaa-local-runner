@@ -39,10 +39,11 @@ CREATE TABLE cep_core_todo.dashboard_list (
 
 DROP TABLE IF EXISTS cep_core_todo.comment_files_list;
 CREATE TABLE cep_core_todo.comment_files_list (
-	profiled_id text NOT NULL,
+	salesforce_object_id text NOT NULL,
+	salesforce_object_type text NOT NULL,
     "level" text NOT NULL,
     product text NOT NULL,
 	parquet_uploaded bool DEFAULT false NULL,
 	excel_uploaded bool DEFAULT false NULL,
-	CONSTRAINT comment_files_list_profiled_id_product_key UNIQUE(profiled_id, product, level)
+	CONSTRAINT comment_files_list_salesforce_object_id_product_level_key UNIQUE(salesforce_object_id, product, level)
 );
