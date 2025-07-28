@@ -18,6 +18,7 @@ CREATE TABLE cep_core_todo.surveys_list (
 	definition_in_postgres bool DEFAULT false NULL,
 	responses_in_s3 bool DEFAULT false NULL,
 	responses_in_postgres bool DEFAULT false NULL,
+	deleted_upstream bool DEFAULT false NOT NULL,
 	s3_object_name varchar NULL,
 	survey_is_active bool DEFAULT true NOT NULL,
 	CONSTRAINT surveys_list_survey_id_key UNIQUE (survey_id)
