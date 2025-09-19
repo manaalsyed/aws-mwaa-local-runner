@@ -19,6 +19,7 @@ CREATE TABLE cep_core_todo.surveys_list (
 	responses_in_s3 BOOL DEFAULT FALSE NULL,
 	responses_in_postgres BOOL DEFAULT FALSE NULL,
 	deleted_upstream BOOL DEFAULT FALSE NOT NULL,
+	response_rate_file_in_sharepoint BOOL DEFAULT FALSE NULL,
 	s3_object_name VARCHAR NULL,
 	survey_is_active BOOL DEFAULT true NOT NULL,
 	CONSTRAINT surveys_list_survey_id_key UNIQUE (survey_id)
